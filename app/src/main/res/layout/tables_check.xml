@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkgrey"
+    android:orientation="vertical"
+    tools:context="com.san.collection.TablesCheck">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="5dp"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:id="@+id/ll_outlettbl"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".1"
+            android:padding="5dp"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/txtchowmeintbl"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:gravity="center"
+                android:text="CHOWMEIN"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/spnrresttbl"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".6"
+                android:background="@drawable/spinner_bg" />
+        </LinearLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/sr_alltables"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".57">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_tables"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".3"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".6"
+                android:orientation="vertical">
+
+                <LinearLayout style="@style/tablesll_stles">
+
+                    <TextView
+                        android:id="@+id/txtpaid"
+                        style="@style/tablesll_txtstylenames"
+                        android:text="TOTAL AMNT" />
+
+                    <TextView
+                        android:id="@+id/txtcolon1"
+                        style="@style/tablesll_txtcolon" />
+
+                    <TextView
+                        android:id="@+id/txtpaidtotal"
+                        style="@style/tablesll_txtstyleprices" />
+                </LinearLayout>
+
+               <!-- <LinearLayout style="@style/tablesll_stles">
+
+                    &lt;!&ndash;  <TextView
+                          android:id="@+id/txtdining"
+                          style="@style/tablesll_txtstylenames"
+                          android:text="PENDING AMOUNT" />&ndash;&gt;
+
+                    <TextView
+                        android:id="@+id/txtcolon2"
+                        style="@style/tablesll_txtcolon" />
+
+                    &lt;!&ndash; <TextView
+                         android:id="@+id/txtdiningtotal"
+                         style="@style/tablesll_txtstyleprices" />&ndash;&gt;
+                </LinearLayout>-->
+
+               <!-- <LinearLayout style="@style/tablesll_stles">
+
+                    &lt;!&ndash; <TextView
+                         android:id="@+id/txtparcel"
+                         style="@style/tablesll_txtstylenames"
+                         android:text="PARCEL AMOUNT" />&ndash;&gt;
+
+                    <TextView
+                        android:id="@+id/txtcolon6"
+                        style="@style/tablesll_txtcolon" />
+
+                    &lt;!&ndash;<TextView
+                        android:id="@+id/txtparceltotal"
+                        style="@style/tablesll_txtstyleprices" />&ndash;&gt;
+                </LinearLayout>-->
+
+                <LinearLayout style="@style/tablesll_stles">
+
+                    <TextView
+                        android:id="@+id/txtothers"
+                        style="@style/tablesll_txtstylenames"
+                        android:text="OTHER AMNT" />
+
+                    <TextView
+                        android:id="@+id/txtcolon3"
+                        style="@style/tablesll_txtcolon" />
+
+                    <TextView
+                        android:id="@+id/txtothertotal"
+                        style="@style/tablesll_txtstyleprices" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/tablesll_stles">
+
+                    <TextView
+                        android:id="@+id/txtdscnt"
+                        style="@style/tablesll_txtstylenames"
+                        android:text="DISCOUNT AMNT" />
+
+                    <TextView
+                        android:id="@+id/txtcolon4"
+                        style="@style/tablesll_txtcolon" />
+
+                    <TextView
+                        android:id="@+id/txtdscnttotal"
+                        style="@style/tablesll_txtstyleprices" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/tablesll_stles">
+
+                    <TextView
+                        android:id="@+id/txttotal"
+                        style="@style/tablesll_txtstylenames"
+                        android:text="GRAND TOTAL" />
+
+                    <TextView
+                        android:id="@+id/txtcolon5"
+                        style="@style/tablesll_txtcolon" />
+
+                    <TextView
+                        android:id="@+id/txttotalamount"
+                        style="@style/tablesll_txtstyleprices" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".003"
+                android:background="@color/cornflowerblue"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txtdining"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".2"
+                    android:gravity="center|bottom"
+                    android:text="PENDING AMNT"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/txtdiningtotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".2"
+                    android:gravity="center|top"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/txtparcel"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".2"
+                    android:gravity="center|bottom"
+                    android:text="PARCEL AMNT"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/txtparceltotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".2"
+                    android:gravity="center|top"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

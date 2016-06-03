@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkgrey"
+    android:orientation="vertical"
+    tools:context="com.san.collection.ItemCalculation">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:id="@+id/ll_outlet"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".08"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/txtchowmein"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:gravity="center"
+                android:text="CHOWMEIN"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spnrrest"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".6"
+                android:background="@drawable/spinner_bg" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".005" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".06"
+            android:background="@color/darkred"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/txtitm"
+                style="@style/itemwisetxt"
+                android:layout_weight=".55"
+                android:text="@string/itemname" />
+
+            <TextView
+                android:id="@+id/txtqty"
+                style="@style/itemwisetxt"
+                android:layout_weight=".14"
+                android:text="@string/qty" />
+
+            <TextView
+                android:id="@+id/txtitmrate"
+                style="@style/itemwisetxt"
+                android:layout_weight=".15"
+                android:text="@string/rate" />
+
+            <TextView
+                android:id="@+id/txtaction2"
+                style="@style/itemwisetxt"
+                android:layout_weight=".16"
+                android:text="@string/price" />
+
+        </LinearLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/sr_allitems"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".78">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_itemswise"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".08"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="New Text"
+                android:layout_weight=".84"
+                android:gravity="center|right"
+                android:textColor="@color/white"
+                android:id="@+id/textView2" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="New Text"
+                android:layout_weight=".16"
+                android:gravity="center|left"
+                android:textColor="@color/white"
+                android:id="@+id/textView3" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
